@@ -1,0 +1,12 @@
+{
+  "Id": "7517dcc9-5645-4de0-a687-02186285d5d3",
+  "DomainCode": "DMO",
+  "Username": "abuck101",
+  "FirstName": "Aaron",
+  "LastName": "Buckley",
+  "Email": "aaron.test@cool-guy.com",
+  "IsChild": false,
+  "EmailConfirmed": false,
+  "Roles": ["ACE Student"],
+  "Country": "one"
+}

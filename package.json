@@ -1,0 +1,17 @@
+{
+  "name": "mee.identity.pa11y.mocks",
+  "version": "0.0.1",
+  "description": "Mocks for Centralised Login Pa11y tests",
+  "private": true,
+  "author": "SIGMA",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start:server-local": "PORT=5010 nodemon server.js",
+    "start:server": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
