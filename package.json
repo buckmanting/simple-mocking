@@ -1,6 +1,6 @@
 {
   "name": "tequila-mockingbird",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple mock server for responding with stubbed data",
   "author": "springerBuck",
   "license": "MIT",

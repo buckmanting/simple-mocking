@@ -20,7 +20,7 @@ const startMockingServer = (options) => {
 
 		app.use(returnMock(options));
 
-		const port = process.env.PORT ?? 5010;
+		const port = options.port ?? 5010;
 		const instance = app.listen(port, error => {
 			if (error) {
 				return reject(error);
