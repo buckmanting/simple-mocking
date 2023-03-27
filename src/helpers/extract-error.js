@@ -58,8 +58,8 @@ function _findError(body) {
     return error;
 }
 
-const extractErrorRequest = body => {
-    let error = _findError(body);
+const extractErrorRequest = request => {
+    let error = _findError(request.body);
 
     if (error) {
         console.info(`🔎 found error: "${error}"`);

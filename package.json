@@ -1,6 +1,6 @@
 {
   "name": "tequila-mockingbird",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Simple mock server for responding with stubbed data",
   "author": "springerBuck",
   "license": "MIT",
@@ -10,13 +10,16 @@
     "mock api",
     "mock server"
   ],
-  "main": "src/server.js",
+  "bin": {
+    "tequila-mockingbird": "bin/index.js"
+  },
   "scripts": {
-    "start:server-local": "PORT=5010 nodemon src/server.js",
-    "start:server": "node src/server.js"
+    "start:server-local": "PORT=5010 nodemon src/mocks-server.js",
+    "start:server": "node src/mocks-server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
+    "command-line-args": "^5.2.1",
     "express": "^4.18.2",
     "nodemon": "^2.0.22"
   },
