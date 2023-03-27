@@ -1,5 +1,4 @@
-import {extractDataFromMockData} from '../helpers/extract-data-from-mock-data';
-
+const {extractDataFromMockData} = require('../helpers/extract-data-from-mock-data');
 const {extractErrorRequest} = require('../helpers/extract-error');
 const {buildMockPath} = require('../helpers/build-mock-path');
 
@@ -7,7 +6,7 @@ const returnMock = (options) => {
     return (request, response) => {
         let mockPath;
 
-        const requestedError = extractErrorRequest(request.body);
+        const requestedError = extractErrorRequest(request);
         if (requestedError) {
             mockPath = `${buildMockPath(request, options.mocksPath)}-${requestedError}.json`;
         } else {
@@ -20,8 +19,7 @@ const returnMock = (options) => {
                 mockData = extractDataFromMockData(options.mockData, request.originalUrl, requestedError);
             } else if(options.mocksPath) {
                 mockData = require(mockPath);
-            }
-            else{
+            } else{
                 console.error('You must supply a mocksPath or mockData in the options object');
             }
             console.log('📬', mockPath, mockData);

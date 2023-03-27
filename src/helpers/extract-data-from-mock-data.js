@@ -1,4 +1,4 @@
-export function extractDataFromMockData(mockData, originalUrl, requestedError) {
+const extractDataFromMockData = (mockData, originalUrl, requestedError) => {
 	const splitUrl = originalUrl.split('/');
 	// extract property from mockData by splitUrl
 	let data = mockData;
@@ -15,3 +15,5 @@ export function extractDataFromMockData(mockData, originalUrl, requestedError) {
 
 	return data;
 }
+
+module.exports = {extractDataFromMockData};
