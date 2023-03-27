@@ -1,5 +1,5 @@
 {
-  "name": "tequila",
+  "name": "tequila-mockingbird",
   "version": "0.0.1",
   "description": "Simple mock server for responding with stubbed data",
   "author": "springerBuck",
