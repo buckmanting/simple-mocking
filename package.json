@@ -1,17 +1,17 @@
 {
-  "name": "mee.identity.pa11y.mocks",
+  "name": "tequila",
   "version": "0.0.1",
-  "description": "Mocks for Centralised Login Pa11y tests",
-  "private": true,
-  "author": "SIGMA",
-  "license": "UNLICENSED",
+  "description": "Simple mock server for responding with stubbed data",
+  "author": "springerBuck",
+  "license": "MIT",
   "scripts": {
-    "start:server-local": "PORT=5010 nodemon server.js",
-    "start:server": "node server.js"
+    "start:server-local": "PORT=5010 nodemon src/server.js",
+    "start:server": "node src/server.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
-  }
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  },
+  "repository": "https://github.com/springerBuck/simple-mocking"
 }
