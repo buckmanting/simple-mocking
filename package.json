@@ -4,6 +4,13 @@
   "description": "Simple mock server for responding with stubbed data",
   "author": "springerBuck",
   "license": "MIT",
+  "keywords": [
+    "mocking server",
+    "mocks",
+    "mock api",
+    "mock server"
+  ],
+  "main": "src/server.js",
   "scripts": {
     "start:server-local": "PORT=5010 nodemon src/server.js",
     "start:server": "node src/server.js"
@@ -13,5 +20,8 @@
     "express": "^4.18.2",
     "nodemon": "^2.0.22"
   },
-  "repository": "https://github.com/springerBuck/simple-mocking"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/springerBuck/simple-mocking.git"
+  }
 }
