@@ -26,5 +26,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/springerBuck/simple-mocking.git"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.10"
   }
 }
