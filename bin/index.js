@@ -1,4 +1,4 @@
-const {startMockingServer} = require ('../src/mocks-server');
+const {startMockingServer} = require('../src/mocks-server');
 const commandLineArgs = require('command-line-args');
 
 const optionDefinitions = [
