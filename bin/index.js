@@ -2,7 +2,8 @@ const {startMockingServer} = require ('../src/mocks-server');
 const commandLineArgs = require('command-line-args');
 
 const optionDefinitions = [
-	{name: 'path', alias: 'p', type: String, defaultOption: true}
+	{name: 'port', alias: 'p', type: number, defaultOption: true},
+	{name: 'path', type: String, defaultOption: true}
 ];
 const options = commandLineArgs(optionDefinitions);
 

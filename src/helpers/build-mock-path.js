@@ -1,4 +1,4 @@
-const buildMockPath = request => {
+const buildMockPath = (request, basePath) => {
     // split get the left hand side of the path
     const splitUrl = request.originalUrl.split('/');
     const initialPath = splitUrl
@@ -17,7 +17,7 @@ const buildMockPath = request => {
         .split('#')[0];
 
     // build and return the response
-    return `../responses/${initialPath}/${request.method}/${cleanedFileName}`;
+    return `${basePath}/${initialPath}/${request.method}/${cleanedFileName}`;
 };
 
 module.exports = {buildMockPath};
