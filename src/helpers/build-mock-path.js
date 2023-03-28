@@ -17,7 +17,8 @@ const buildMockPath = (request, basePath) => {
         .split('#')[0];
 
     // build and return the response
-    return `${basePath}/${initialPath}/${request.method}/${cleanedFileName}`;
+    // we do "../../../../" to get out of the node_modules folder and into the root of the project
+    return `../../../../${basePath}/${initialPath}/${request.method}/${cleanedFileName}`;
 };
 
 module.exports = {buildMockPath};

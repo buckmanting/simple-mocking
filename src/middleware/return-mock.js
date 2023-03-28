@@ -15,11 +15,11 @@ const returnMock = (options) => {
 
         let mockData;
         try {
-            if(options.mockData){
+            if (options.mockData) {
                 mockData = extractDataFromMockData(options.mockData, request.originalUrl, requestedError);
-            } else if(options.mocksPath) {
+            } else if (options.mocksPath) {
                 mockData = require(mockPath);
-            } else{
+            } else {
                 console.error('You must supply a mocksPath or mockData in the options object');
             }
             console.log('📬', mockPath, mockData);
