@@ -2,7 +2,7 @@ const {startMockingServer} = require ('../src/mocks-server');
 const commandLineArgs = require('command-line-args');
 
 const optionDefinitions = [
-	{name: 'port', alias: 'p', type: number, defaultOption: true},
+	{name: 'port', alias: 'p', type: Number},
 	{name: 'path', type: String, defaultOption: true}
 ];
 const options = commandLineArgs(optionDefinitions);
@@ -11,5 +11,6 @@ const options = commandLineArgs(optionDefinitions);
 // https://github.com/75lb/command-line-usage
 
 startMockingServer({
-	mocksPath: options.path
+	mocksPath: options.path,
+	port: options.port
 });

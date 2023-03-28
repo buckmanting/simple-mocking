@@ -11,7 +11,7 @@
     "mock server"
   ],
   "bin": {
-    "tequila-mockingbird": "bin/index.js"
+    "tequila-mockingbird": "./bin/index.js"
   },
   "scripts": {
     "start:server-local": "PORT=5010 nodemon src/mocks-server.js",
