@@ -11,12 +11,16 @@ const startMockingServer = (options) => {
 		if (!options.mocksPath && !options.mockData) {
 			throw new Error('You must supply a mocksPath or mockData');
 		}
+		if(!options.logLevel) {
+			options.logLevel = 'info';
+		}
+
 		const app = express();
 
 		app.use(bodyParser.urlencoded({extended: false}));
 		app.use(bodyParser.json());
 
-		app.use(logRequest());
+		app.use(logRequest(options));
 
 		app.use(returnMock(options));
 
@@ -25,7 +29,11 @@ const startMockingServer = (options) => {
 			if (error) {
 				return reject(error);
 			}
-			console.info(`🎬 server started on http://localhost:${port}`);
+			if (options.logLevel !== 'warn' ||
+				options.logLevel !== 'error' ||
+				options.logLevel !== 'off') {
+				console.info(`🎬 server started on http://localhost:${port}`);
+			}
 
 			resolve(instance);
 		});

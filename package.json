@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start:server-local": "PORT=5010 nodemon src/mocks-server.js",
-    "start:server": "node src/mocks-server.js"
+    "start:server": "node src/mocks-server.js",
+    "start:server-test": "node test/test-server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
